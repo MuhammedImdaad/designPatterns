@@ -2,7 +2,7 @@
 
 There are many objects we only need one of: thread pools, caches, dialog boxes, objects that handle preferences and registry settings, objects used for logging, and objects that act as device drivers to devices like printers and graphics cards.
 
-The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
+The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it. ![alt text](image.png)
 
 a common criticism of the Singleton Pattern is every object in the code that depends on the Singleton is going to be tightly coupled to that very specific object which violates the loose coupling principle. 
 

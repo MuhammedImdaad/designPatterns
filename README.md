@@ -10,11 +10,10 @@ OO Basics
 
 Gamma Categorization
 * Design patterns are typically split into three categories
-    * Creational - builder, factory
+    * Creational - builder, factory, singleton
     * Structural
     * Behavioral
 
-Singleton-
 Observer-
 Strategy-
 Adapter-
