@@ -2,14 +2,19 @@
 
 SOLID Principals
 
+OO Basics
+* Abstraction
+* Inheritance
+* Polymorphism
+* Encapsulation
+
 Gamma Categorization
 * Design patterns are typically split into three categories
-    * Creational
+    * Creational - builder, factory
     * Structural
     * Behavioral
 
 Singleton-
-Factory(2)-
 Observer-
 Strategy-
 Adapter-
