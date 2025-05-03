@@ -10,7 +10,7 @@ using namespace std;
 
 class VacationBuilder
 {
-    shared_ptr<Vacation> vacation;
+    unique_ptr<Vacation> vacation;
 
 public:
     VacationBuilder(string customer)
@@ -42,8 +42,8 @@ public:
         vacation->days.back().specialEvents.emplace_back(event);
         return *this;
     }
-    shared_ptr<Vacation> create()
+    unique_ptr<Vacation> create()
     {
-        return vacation;
+        return std::move(vacation);
     }
 };
