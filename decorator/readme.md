@@ -1,18 +1,16 @@
-# Singleton
+# Decorator
+The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality. ![alt text](image.png)
+![alt text](image-1.png)
 
-There are many objects we only need one of: thread pools, caches, dialog boxes, objects that handle preferences and registry settings, objects used for logging, and objects that act as device drivers to devices like printers and graphics cards.
+It give objects new responsibilities without making any code changes to the underlying classes. Objects can be decorated at any time, so we can decorate objects dynamically at runtime with as many decorators as we like. Here we’re using inheritance to achieve the type matching, but we aren’t using inheritance to get behavior. The behavior comes in through the composition of decorators with the base components as well as other decorators. `We typically create decorators by using other patterns like Factory and Builder so that the creation of the concrete component with its decorator is “well encapsulated” and doesn’t lead to problems.`
 
-The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it. ![alt text](image.png)
-
-a common criticism of the Singleton Pattern is every object in the code that depends on the Singleton is going to be tightly coupled to that very specific object which violates the loose coupling principle. 
-
-Is it okay to subclass a Singleton? - not really, Singletons are meant to be used sparingly. `I just showed a way how to use it, but it is not recommended. `
-
-
-* The Singleton Pattern ensures you have at most one instance of a class in your application.
-
-* The Singleton Pattern also provides a global access point to that instance.
-
-* Singleton Pattern makes use of a private constructor, a static method combined with a static variable.
-
-* Examine your performance and resource constraints and carefully choose an appropriate Singleton implementation for multithreaded applications (and we should consider all applications multithreaded!).
+* Inheritance is one form of extension, but not necessarily the best way to achieve flexibility in our designs.
+* In our designs we should allow behavior to be extended without the need to modify existing code.
+* Composition and delegation can often be used to add new behaviors at runtime.
+* The Decorator Pattern provides an alternative to subclassing for extending behavior.
+* The Decorator Pattern involves a set of decorator classes that are used to wrap concrete components.
+* Decorator classes mirror the type of the components they decorate. (In fact, they are the same type as the components they decorate, either through inheritance or interface implementation.)
+* Decorators change the behavior of their components by adding new functionality before and/or after (or even in place of) method calls to the component.
+* You can wrap a component with any number of decorators.
+* Decorators are typically transparent to the client of the component—that is, unless the client is relying on the component’s concrete type.
+* Decorators can result in many small objects in our design, and overuse can be complex.

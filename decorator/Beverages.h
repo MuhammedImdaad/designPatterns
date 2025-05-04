@@ -27,7 +27,7 @@ public:
 
     void setSize(Size size) {this->size = size;}
 
-    Size getSize() { return size; }
+    Size getSize() const { return size; }
 
     virtual double cost() = 0;
     virtual ~Beverage() = default;
