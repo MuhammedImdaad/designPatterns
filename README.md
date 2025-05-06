@@ -12,7 +12,6 @@ Gamma Categorization
 * Design patterns are typically split into three categories
     * Creational - builder, factory, singleton
     * Structural - adapter, decorator
-    * Behavioral - command
+    * Behavioral - command, Observer
 
-Observer-
 Strategy-
